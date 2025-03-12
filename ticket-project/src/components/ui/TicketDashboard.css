@@ -1,0 +1,328 @@
+.ticket-dashboard {
+  padding: 24px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Arial', sans-serif;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  color: gray;
+  margin-right: 8px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+}
+
+.right-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 5px;
+  width: 100%;
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+  list-style: none; /* Removed dots */
+}
+
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+}
+
+.new-ticket-button {
+  background: #6a0dad;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.new-ticket-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+}
+
+.filters-container {
+  margin-bottom: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-button {
+  padding: 8px 15px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button.active {
+  background: #6a0dad;
+  color: white;
+}
+
+.filter-button:hover {
+  border-color: #6a0dad;
+  background: rgba(106, 13, 173, 0.1);
+}
+
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.ticket-card {
+  background: rgb(255, 255, 255);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px; 
+}
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-time {
+  margin-left: auto;
+  font-size: 14px;
+  color: gray;
+}
+
+
+.ticket-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-id {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 15px; /* Add space below Ticket ID */
+}
+
+
+.ticket-icon {
+  margin-right: 5px;
+  color: #6a0dad;
+}
+
+.ticket-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 4px;
+}
+
+.badge {
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.open-ticket-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.open-ticket {
+  background: #6a0dad;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.open-ticket:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
+}
+
+.ticket-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.delete-icon {
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.2s;
+}
+
+.delete-icon:hover {
+  color: darkred;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+.modal-content h2 {
+  font-size: 22px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #777;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.modal-content textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-content .dropdown {
+  width: 90%;
+}
+.modal-content button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  width: 50%;
+}
+
+.modal-content button:hover {
+  background: #0056b3;
+}
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: flex-end; /* Aligns pagination to the right */
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: scale(1);
+}
